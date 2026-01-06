@@ -39,10 +39,6 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     font-family: var(--font-main);
     background-color: var(--primary);
@@ -52,7 +48,6 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    min-height: 100vh;
     overflow-x: hidden;
 }
 
@@ -419,6 +414,7 @@ p {
 
 .contact {
     position: relative;
+    padding-bottom: 50vh;
 }
 
 /* 2. The Text Layers */
