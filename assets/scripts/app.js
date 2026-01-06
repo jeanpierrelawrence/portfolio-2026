@@ -44,3 +44,11 @@ const initCarousel = () => {
 
 // Start the carousel logic
 initCarousel();
+
+document.getElementById('contact-trigger').addEventListener('click', function(e) {
+  e.preventDefault();
+  // Bots have a hard time reading variables assembled like this
+  const user = "jeannpierrelawrence";
+  const domain = "gmail.com";
+  window.location.href = "mailto:" + user + "@" + domain;
+});
