@@ -432,13 +432,18 @@ p {
 .contact .contact-btn {
     position: absolute;  /* Takes it out of the grid flow */
     right: 10%;           /* Pins it to the right edge of the section */
-    top: 60%;            /* Moves it to the vertical middle */
-    transform: translateY(-50%); /* Perfectly aligns it to the horizontal axis */
+    top: 30%;            /* Moves it to the vertical middle */
     
     z-index: 10;
     display: inline-flex;
     align-items: center;
     width: fit-content;
+
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-family: var(--font-main);
+    font-size: var(--fs-base);
 }
 
 #p1-title {
