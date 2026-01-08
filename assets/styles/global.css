@@ -48,7 +48,22 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    overflow-x: hidden;
+    overflow: visible;
+}
+
+#smooth-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#smooth-content {
+    width: 100%;
+    height: auto;
+    overflow: visible;
 }
 
 .title {
@@ -87,13 +102,17 @@ h1, h2, h3, .title {
     color: var(--primary-dark-muted)
 }
 
+button, a {
+    -webkit-tap-highlight-color: transparent;
+}
+
 /* --- Navbar Layout --- */
 
 .navbar {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: var(--space-md) 0;
+    padding: var(--space-lg) 0;
     position: relative;
     z-index: 2000;
 }
@@ -101,13 +120,14 @@ h1, h2, h3, .title {
 /* --- Hamburger Icon --- */
 
 .menu-toggle {
+    position: fixed;
     display: flex;
     flex-direction: column;
     gap: 8px;
     background: none;
+    padding: 10px;
     border: none;
     cursor: pointer;
-    padding: 10px;
     z-index: 1500;
 }
 
@@ -150,8 +170,8 @@ h1, h2, h3, .title {
 
 .nav-links a {
     display: inline-flex;  
-    align-items: center;   /* Keeps text and potential icons on the same horizontal axis */
-    height: 1.5em;        /* Set a consistent height for all link "boxes" */
+    align-items: center;  
+    height: 1.5em;      
     font-size: var(--fs-nav);
     font-weight: var(--fw-s);
     color: var(--bg-soft);
@@ -182,7 +202,7 @@ h1, h2, h3, .title {
 .contact-btn::after {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: -5px;
     left: 0;
     width: 100%;          
     height: 1px;
@@ -201,17 +221,17 @@ h1, h2, h3, .title {
 /* Animate bars into an X */
 
 .menu-toggle.is-active .bar:nth-child(1) {
-    transform: translateY(5px) rotate(45deg);
+    transform: rotate(45deg);
     background-color: var(--bg-soft);
 }
 
 .menu-toggle.is-active .bar:nth-child(2) {
-    transform: translateY(-5px) rotate(-45deg);
-    background-color: var(--bg-soft);
+    display: none;
 }
 
 .menu-toggle.is-active .bar:nth-child(3) {
-    display: none
+    transform: rotate(-45deg);
+    background-color: var(--bg-soft);
 }
 
 p {
@@ -240,7 +260,7 @@ p {
 }
 
 .project__carousel::-webkit-scrollbar {
-    display: none; /* Hide scrollbar Chrome/Safari */
+    display: none; 
 }
 
 .project__exhibit {
@@ -338,7 +358,7 @@ p {
     margin-block: var(--space-lg);
 }
 
-/* 1. The Container */
+
 .heading-grid {
     display: grid;
     place-items: center; 
@@ -348,7 +368,7 @@ p {
     min-height: 30vh;
 }
 
-/* 2. The Background (The Anchor) */
+
 .heading-grid span {
     grid-area: 1 / 1;
     z-index: 1;
@@ -357,19 +377,16 @@ p {
     color: var(--white);
     opacity: 0.7;
     pointer-events: none;
-    /* This ensures it stays centered regardless of what the H2 does */
     place-self: center; 
 }
 
-/* 3. The Foreground (The Flexible Layer) */
 .heading-grid h2 {
     grid-area: 1 / 1;
     z-index: 2;
     position: relative;
     width: 100%;
-    max-width: 90vw; /* Keeps it from hitting screen edges */
+    max-width: 90vw; 
     text-transform: uppercase;
-    /* Default to center so it doesn't break other pages */
     place-self: center;
     text-align: center;
 }
@@ -380,10 +397,9 @@ p {
 }
 
 .contact .heading-grid h2 {
-    place-self: center start; /* Moves the black text layer to the left */
+    place-self: center start; 
     text-align: left;
     margin-left: 24px; 
-    max-width: 300px; /* Forces 'Get in touch' to wrap onto two lines */
 }
 .the-approach p {
     text-align: center;
@@ -396,14 +412,12 @@ p {
 
 .the-approach .heading-grid span,
 .the-approach .heading-grid h2 {
-    place-self: center;    /* Overrides 'center start' */
-    text-align: center;    /* Overrides 'left' */
-    margin-left: 0;        /* Removes the 24px gap you had for the left-align */
-    max-width: 90vw;       /* Ensures it has room to wrap symmetrically */
+    place-self: center;   
+    text-align: center;    
+    margin-left: 0;        
+    max-width: 90vw;      
 }
 
-/* 1. The Container stays full width */
-/* 1. The Container must be Relative */
 .contact .heading-grid {
     display: grid;
     place-items: center start; 
@@ -414,25 +428,24 @@ p {
 
 .contact {
     position: relative;
-    padding-bottom: 50vh;
+    padding-bottom: var(--space-huge);
 }
 
-/* 2. The Text Layers */
 .contact .heading-grid span, 
 .contact .heading-grid h2 {
     grid-area: 1 / 1;
     place-self: center start;
     text-align: left;
-    max-width: 320px; /* Keeps your 2-line wrap */
+    max-width: 320px;
     line-height: 0.9;
     margin: 0;
 }
 
-/* 3. The Button (The Fix) */
 .contact .contact-btn {
-    position: absolute;  /* Takes it out of the grid flow */
-    right: 10%;           /* Pins it to the right edge of the section */
-    top: 30%;            /* Moves it to the vertical middle */
+    position: absolute;  
+    right: 10%;         
+    top: 40%;         
+    transform: translateY(-100%);
     
     z-index: 10;
     display: inline-flex;
@@ -446,9 +459,14 @@ p {
     font-size: var(--fs-base);
 }
 
+.contact p {
+    text-align: center;
+    padding-bottom: var(--space-lg)
+}
+
 #p1-title {
     margin-inline: 1.5em;
 }
 #hero-title {
-    margin-block: var(--space-lg);
+    margin-block: calc(var(--space-lg) + var(--space-md) + var(--space-lg));
 }
