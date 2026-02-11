@@ -9,10 +9,11 @@
 </head>
 
 <body>
+    
     <header>
         <nav>
-            <button aria-label="Menu" class="menu-trigger">
-                <span class="target-icon"></span>
+            <button id="nav-btn">
+                <span class="span-icon"></span>
             </button>
             <ul>
                 <li><a href="#">Home</a></li>
@@ -24,9 +25,75 @@
 
     <main>
         <section class="hero">
-            <h1></h1>
+            <h1>The economy of attention</h1>
+            <div class="image-cont">
+                <img src="./assets/images/pattern-1.webp" alt="">
+                <img src="./assets/images/gradient.webp" alt="">
+            </div>
+            <p>Every pixel is a transaction. In a world saturated with noise, attention is
+                the scarcest resource — and the one most often squandered. I apply radical
+                subtraction to ensure focus is never stolen, only directed. I don't just
+                design interfaces; I manage the clarity of the interaction.
+            </p>
+        </section>
+        <section class="noise">
+            <h2>Filter out the noise</h2>
+        </section>
+        <section id="the-result">
+            <h2 class="result-title">THE <br> RESULT</h2>
+            <div class="result-visuals">
+                <article class="project-card">
+                    <img src="./assets/images/infinity-club-holidays-logo.avif" alt="Infinity Project Showcase">
+                </article>
+                <article class="project-card">
+                    <img src="./assets/images/" alt="Infinity Project Showcase">
+                </article>
+            </div>
+
+            <p class="result-description">
+                Filtering is an act of preservation. These cases represent the successful navigation of noise...
+            </p>
+
+            <div class="result-footer">
+                <span class="scroll-arrow">&#x2193;</span>
+            </div>
         </section>
     </main>
+
+    <footer id="contact">
+        <p>
+            Translate intent into structure. The economy of attention culminates 
+            in a conversation. Move beyond the noise.
+        </p>
+        <div class="resolution-container">
+            <h2 class="resolution-title">YOUR <br> RESOLUTION</h2>
+
+            <form class="resolution-form">
+                <div class="form-group">
+                    <label for="name">NAME</label>
+                    <input type="text" id="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">EMAIL</label>
+                    <input type="email" id="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="intent">INTENT</label>
+                    <input type="text" id="intent" required>
+                </div>
+
+                <button type="submit">Initiate</button>
+            </form>
+        </div>
+
+        <div class="resolution-visuals" aria-hidden="true">
+            <img src="./assets/images/pattern-2.webp" alt="">
+            <img src="./assets/images/hollow.webp" alt="">
+            <img src="./assets/images/gradient.webp" alt="">
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
