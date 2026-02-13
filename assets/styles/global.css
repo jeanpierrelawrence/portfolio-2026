@@ -4,10 +4,8 @@
 
     --font-main: 'Satoshi', sans-serif;
 
-    --fs-sm: 0.875rem;  
-    --fs-med: 2rem;
-    --fs-lg: 3rem;  
-    --fs-xl: 4rem;
+    --fs-headings: 4rem;
+    --fs-body: 1rem;
 
     --fw-lg: 900;
     --fw-m: 600;
@@ -37,10 +35,78 @@ body {
     font-family: var(--font-main);
     background-color: var(--primary);
     color: var(--secondary);
-    font-size: var(--fs-base);    
+    font-size: var(--fs-body);    
     line-height: var(--lh-base);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    overflow: visible;
+}
+
+/*
+====================================================================
+                            GLOBAL
+====================================================================
+*/
+
+main {
+    text-align: center;
+}
+
+h1, h2 {
+    font-size: var(--fs-headings);
+}
+
+/*
+====================================================================
+                            HEADER
+====================================================================
+*/
+
+header nav button {
+    margin: var(--space-sm) var(--space-sm);
+    width: 2.3rem;
+    height: 2.3rem;
+    border-radius: 2.3rem;
+    background: transparent;
+    border: 1px solid var(--secondary);
+
+    display: grid;
+    place-content: center;
+
+    position: sticky;
+    float: right;
+}
+
+header nav button span {
+    display: block;
+    width: 1.4rem;
+    height: 1.4rem;
+    background: var(--secondary);
+    border-radius: 1.4rem;
+}   
+
+
+
+
+/*
+====================================================================
+                            HERO
+====================================================================
+*/
+
+#hero h1 {
+    line-height: var(--lh-xl);
+}
+
+#hero h1 .h-small {
+    font-size: 2rem;
+}
+
+#hero h1 .h-italic {
+    font-size: 3rem;
+    font-weight: var(--fw-s);
+}
+
+#hero h1 strong {
+    line-height: var(--lh-lg);
 }
