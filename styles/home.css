@@ -1,3 +1,16 @@
+/* ==========================================================================
+     GLOBALS
+========================================================================== */
+
+.work-title {
+   font-size: var(--fs-lg);
+   line-height: var(--fs-lg);
+}
+
+/* ==========================================================================
+     HEADER
+========================================================================== */
+
 .header-meta {
     font-size: var(--fs-md);
     line-height: var(--lh-md);
@@ -27,17 +40,116 @@
     background-color: var(--clr-gray-200);
 }
 
+/* ==========================================================================
+     Hero
+========================================================================== */
+
 .hero-footer p {
     font-weight: 800;
+    padding-top: var(--space-2);
+}
+
+.hero-footer .scroll-indicator {
+    text-align: center;
+    padding-top: var(--space-2);
 }
 
 .hero-focal {
     font-size: 10rem;
     line-height: 8rem;
     font-weight: 800;
+    letter-spacing: -10px;
 }
 
-.work-title {
-   font-size: var(--fs-lg);
-   line-height: var(--fs-lg);
+/* ==========================================================================
+    Work
+========================================================================== */
+
+.work h2 {
+    padding-top: var(--space-1);
+}
+
+.work-grid {
+    display: grid;
+    gap: var(--space-3);
+    padding-top: var(--space-5);
+}
+
+.work-item {
+    display: grid;
+    place-content: center;
+}
+
+.work-item a img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+}
+
+.work-item .content {
+    padding-top: var(--space-1);
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+}
+
+.work-item a svg {
+    width: 35px;
+}
+
+@media only screen and (min-width: 48rem) {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header.section-padding {
+        padding-top: var(--space-3);
+    }
+
+    .header-nav {
+        padding-top: 0;
+    }
+
+    .header-nav ul {
+        gap: var(--space-2);
+    }
+
+    .hero-footer {
+        display: flex;
+        align-items: center;
+        padding-top: var(--space-4);
+    }
+
+    .hero-footer > * {
+        flex: 1;
+    }
+
+    .hero-footer .scroll-indicator {
+        text-align: right;
+    }
+
+    .hero-focal {
+        font-size: 17rem;
+        line-height: 13rem;
+        letter-spacing: -20px;
+    }
+}
+
+@media only screen and (min-width: 75rem) {
+   :root {
+      --fs-sm: 1rem;
+      --lh-sm: 1rem;
+
+      --fs-md: 2.5rem;
+      --lh-md: 2.75rem;
+
+      --fs-lg: 3.75rem;
+      --lh-lg: 4rem;
+
+      --fs-xl: 7rem;
+      --lh-xl: 7rem;
+   }
 }

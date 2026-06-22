@@ -94,6 +94,10 @@ p {
    font-weight: 700;
 }
 
+span {
+   display: block;
+}
+
 .rounded-btn {
    border-radius: var(--radius-full);
    padding: var(--space-1) var(--space-2);
@@ -109,17 +113,13 @@ p {
 }
 
 .section-padding {
-    padding: var(--space-5) var(--space-1);
-}
-
-.header-section-padding {
     padding: var(--space-3) var(--space-1);
 }
 
 @media only screen and (min-width: 48rem) {
    :root {
-        --fs-sm: 1.125rem;
-        --lh-sm: 1.5rem;
+        --fs-sm: 1rem;
+        --lh-sm: 1rem;
 
         --fs-md: 2.25rem;
         --lh-md: 2.5rem;
@@ -130,20 +130,24 @@ p {
         --fs-xl: 6.5rem;
         --lh-xl: 6.5rem;
    }
+
+   .section-padding {
+      padding: var(--space-5) var(--space-3);
+   }
 }
 
 @media only screen and (min-width: 75rem) {
    :root {
-      --fs-sm: 1.25rem;
-      --lh-sm: 1.5;
+      --fs-sm: 1rem;
+      --lh-sm: 1rem;
 
       --fs-md: 2.5rem;
       --lh-md: 2.75rem;
 
       --fs-lg: 3.75rem;
-      --lh-lg: 4.0625rem;
+      --lh-lg: 4rem;
 
-      --fs-xl: 9.375rem;
-      --lh-xl: 9.375rem;
+      --fs-xl: 7rem;
+      --lh-xl: 7rem;
    }
 }
