@@ -1,0 +1,68 @@
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../assets/fonts/Satoshi-Bold.woff2') format('woff2'),
+       url('../assets/fonts/Satoshi-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../assets/fonts/Satoshi-Black.woff2') format('woff2'),
+       url('../assets/fonts/Satoshi-Black.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--ff-primary);
+}
+
+:root {
+  /* ==========================================================================
+     1. COLOR PALETTE (From image_72ddc6.png)
+     ========================================================================== */
+  --clr-white:    #F5F6F7;
+  --clr-gray-100: #DEE2E6;
+  --clr-gray-200: #ADB5BD;
+  --clr-gray-300: #495057;
+  --clr-black:    #000E10;
+
+  /* ==========================================================================
+     2. TYPOGRAPHY (Figma px to rem conversion)
+     ========================================================================== */
+  --ff-primary: 'Satoshi', sans-serif;
+
+  /* Size: 20px */
+  --fs-base: 1.25rem;
+  --lh-base: 1.5;
+
+  /* Size: 60px / Line-Height: 65px */
+  --fs-md: 3.75rem;
+  --lh-md: 4.0625rem;
+
+  /* Size: 150px / Line-Height: 150px */
+  --fs-lg: 9.375rem;
+  --lh-lg: 9.375rem;
+
+  /* ==========================================================================
+     3. BORDERS & SHAPE
+     ========================================================================== */
+     
+  --radius-subtle: 1.875rem;
+  --radius-full:   9999px;
+
+  /* ==========================================================================
+     4. SPACING SYSTEM (Linear 1rem base scale)
+     ========================================================================== */
+  --space-1: 1rem;
+  --space-2: 2rem;
+  --space-3: 3rem;
+  --space-4: 4rem;
+  --space-5: 5rem;
+}
