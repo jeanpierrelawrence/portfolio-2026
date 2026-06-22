@@ -1,7 +1,6 @@
 @font-face {
   font-family: 'Satoshi';
-  src: url('../assets/fonts/Satoshi-Bold.woff2') format('woff2'),
-       url('../assets/fonts/Satoshi-Bold.woff2') format('woff2');
+  src: url('../assets/fonts/Satoshi-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -9,18 +8,10 @@
 
 @font-face {
   font-family: 'Satoshi';
-  src: url('../assets/fonts/Satoshi-Black.woff2') format('woff2'),
-       url('../assets/fonts/Satoshi-Black.woff2') format('woff2');
+  src: url('../assets/fonts/Satoshi-Black.woff2') format('woff2');
   font-weight: 800;
   font-style: normal;
   font-display: swap;
-}
-
-*, *::before, *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: var(--ff-primary);
 }
 
 :root {
@@ -67,6 +58,13 @@
   --space-5: 5rem;
 }
 
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--ff-primary);
+}
+
 body {
    overflow-x: hidden;
    font-size: var(--fs-sm);
@@ -101,6 +99,7 @@ p {
    padding: var(--space-1) var(--space-2);
    border: none;
    font-size: var(--fs-sm);
+   display: inline-block;
 }
 
 .sub-title {
@@ -111,6 +110,10 @@ p {
 
 .section-padding {
     padding: var(--space-5) var(--space-1);
+}
+
+.header-section-padding {
+    padding: var(--space-3) var(--space-1);
 }
 
 @media only screen and (min-width: 48rem) {
