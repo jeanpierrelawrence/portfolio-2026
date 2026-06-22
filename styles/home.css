@@ -1,0 +1,20 @@
+.header-meta {
+    font-size: var(--fs-md);
+    line-height: var(--lh-md);
+    color: var(--clr-gray-100);
+}
+
+.hero-footer p {
+    font-weight: 800;
+}
+
+.hero-focal {
+    font-size: 10rem;
+    line-height: 8rem;
+    font-weight: 800;
+}
+
+.work-title {
+   font-size: var(--fs-lg);
+   line-height: var(--fs-lg);
+}

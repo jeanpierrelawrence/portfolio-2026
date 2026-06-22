@@ -38,17 +38,17 @@
      ========================================================================== */
   --ff-primary: 'Satoshi', sans-serif;
 
-  /* Size: 20px */
-  --fs-base: 1.25rem;
-  --lh-base: 1.5;
+   --fs-sm: 1rem;
+   --lh-sm: 1.5rem;
 
-  /* Size: 60px / Line-Height: 65px */
-  --fs-md: 3.75rem;
-  --lh-md: 4.0625rem;
+   --fs-md: 1.75rem;
+   --lh-md: 2rem;
 
-  /* Size: 150px / Line-Height: 150px */
-  --fs-lg: 9.375rem;
-  --lh-lg: 9.375rem;
+   --fs-lg: 2.25rem;
+   --lh-lg: 2.5rem;
+
+   --fs-xl: 4rem;
+   --lh-xl: 4rem;
 
   /* ==========================================================================
      3. BORDERS & SHAPE
@@ -65,4 +65,82 @@
   --space-3: 3rem;
   --space-4: 4rem;
   --space-5: 5rem;
+}
+
+body {
+   overflow-x: hidden;
+   font-size: var(--fs-sm);
+   color: var(--clr-black);
+   background-color: var(--clr-white);
+   font-weight: 800;
+}
+
+ul {
+   list-style-type: none;
+}
+
+a {
+   text-decoration: none;
+   color: var(--clr-black);
+}
+
+h2, h3 {
+   font-size: var(--fs-xl);
+   line-height: var(--lh-xl);
+   font-weight: 800;
+}
+
+p {
+   font-size: var(--fs-lg);
+   line-height: var(--fs-lg);
+   font-weight: 700;
+}
+
+.rounded-btn {
+   border-radius: var(--radius-full);
+   padding: var(--space-1) var(--space-2);
+   border: none;
+   font-size: var(--fs-sm);
+}
+
+.sub-title {
+   font-size: var(--fs-lg);
+   line-height: var(--lh-lg);
+   color: var(--clr-gray-200);
+}
+
+.section-padding {
+    padding: var(--space-5) var(--space-1);
+}
+
+@media only screen and (min-width: 48rem) {
+   :root {
+        --fs-sm: 1.125rem;
+        --lh-sm: 1.5rem;
+
+        --fs-md: 2.25rem;
+        --lh-md: 2.5rem;
+
+        --fs-lg: 3rem;
+        --lh-lg: 3.25rem;
+
+        --fs-xl: 6.5rem;
+        --lh-xl: 6.5rem;
+   }
+}
+
+@media only screen and (min-width: 75rem) {
+   :root {
+      --fs-sm: 1.25rem;
+      --lh-sm: 1.5;
+
+      --fs-md: 2.5rem;
+      --lh-md: 2.75rem;
+
+      --fs-lg: 3.75rem;
+      --lh-lg: 4.0625rem;
+
+      --fs-xl: 9.375rem;
+      --lh-xl: 9.375rem;
+   }
 }
