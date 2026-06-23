@@ -175,6 +175,77 @@
     background-color: var(--clr-gray-300);
 }
 
+/* ==========================================================================
+    CONTACT
+========================================================================== */
+
+.contact {
+    text-align: center;
+    padding: var(--space-3) var(--space-1) 0;
+}
+
+.contact h2 {
+    padding-block: var(--space-1) var(--space-3);
+}
+
+.contact-box {
+    padding: var(--space-2);
+    border-radius: var(--radius-subtle);
+    background-color: var(--clr-black);
+    color: var(--clr-white);
+}
+
+.contact-box p {
+    padding-bottom: var(--space-3);
+}
+
+.contact-box a {
+    background-color: var(--clr-white);
+    color: var(--clr-black);
+}
+
+/* ==========================================================================
+    FOOTER
+========================================================================== */
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-grid {
+    display: grid;
+    background-color: var(--clr-gray-100);
+    border-radius: 0 0 var(--radius-subtle) var(--radius-subtle);
+    padding: var(--space-1) var(--space-2);
+}
+
+.footer-credits p {
+    font-size: var(--fs-sm);
+    line-height: var(--lh-sm);
+    color: var(--clr-gray-200);
+    font-weight: 800;
+    text-align: center;
+}
+
+.footer-nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-3);
+}
+
+.footer-nav-list li a {
+    display: block;
+    padding: var(--space-1);
+    border-radius: var(--radius-full);
+}
+
+.footer-nav-list li a img {
+    width: 2rem;
+    height: auto;
+}
+
 @media only screen and (min-width: 48rem) {
 
     /* ==========================================================================
