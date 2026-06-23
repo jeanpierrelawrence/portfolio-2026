@@ -51,7 +51,7 @@
 
 .hero-footer .scroll-indicator {
     text-align: center;
-    padding-top: var(--space-2);
+    padding-top: var(--space-5);
 }
 
 .hero-focal {
@@ -78,16 +78,20 @@
 .work-item {
     display: grid;
     place-content: center;
+    position: relative;
 }
 
 .work-item a img {
     width: 100%;
-    max-width: 400px;
     height: auto;
     object-fit: cover;
+    border-radius: var(--radius-subtle);
 }
 
 .work-item .content {
+    position: absolute;
+    bottom: var(--space-2);
+    left: var(--space-2);
     padding-top: var(--space-1);
     display: flex;
     align-items: center;
@@ -98,7 +102,85 @@
     width: 35px;
 }
 
+.work-item .gradient-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-subtle);
+    background-image: linear-gradient(to top, var(--clr-gray-100), rgba(0, 0, 0, 0));
+}
+
+/* ==========================================================================
+    PRINCIPLES
+========================================================================== */
+
+.card-tags {
+    padding-block: var(--space-3) var(--space-5);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-full);
+    white-space: nowrap;
+    font-size: 0.875rem;
+}
+
+.principles h2 {
+    padding-top: var(--space-1);
+}
+
+.principles-list {
+    padding-top: var(--space-5);
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.principles-item {
+    border-radius: var(--radius-subtle);
+    padding: var(--space-2);
+}
+
+.principles-item:nth-child(1) {
+    background-color: var(--clr-gray-100);
+}
+
+.principles-item:nth-child(1) .tag {
+    background-color: var(--clr-gray-200);
+}
+
+.principles-item:nth-child(2) {
+    background-color: var(--clr-gray-300);
+    color: var(--clr-gray-100);
+}
+
+.principles-item:nth-child(2) .tag {
+    background-color: var(--clr-gray-100);
+    color: var(--clr-gray-300);
+}
+
+.principles-item:nth-child(3) {
+    background-color: var(--clr-black);
+    color: var(--clr-gray-100);
+}
+
+.principles-item:nth-child(3) .tag {
+    background-color: var(--clr-gray-300);
+}
+
 @media only screen and (min-width: 48rem) {
+
+    /* ==========================================================================
+        HEADER
+    ========================================================================== */
+
     header {
         display: flex;
         align-items: center;
@@ -117,6 +199,10 @@
         gap: var(--space-2);
     }
 
+    /* ==========================================================================
+        HERO
+    ========================================================================== */
+
     .hero-footer {
         display: flex;
         align-items: center;
@@ -129,6 +215,7 @@
 
     .hero-footer .scroll-indicator {
         text-align: right;
+        padding-top: 0;
     }
 
     .hero-focal {
@@ -136,20 +223,25 @@
         line-height: 13rem;
         letter-spacing: -20px;
     }
+
+    /* ==========================================================================
+        Work
+    ========================================================================== */
+
+    .work-item a img {
+        width: 100%;
+        max-width: 700px;
+        height: auto;
+        object-fit: cover;
+    }
+
 }
 
 @media only screen and (min-width: 75rem) {
-   :root {
-      --fs-sm: 1rem;
-      --lh-sm: 1rem;
 
-      --fs-md: 2.5rem;
-      --lh-md: 2.75rem;
+   .hero-focal {
+        font-size: 25rem;
+        line-height: 15rem;
+    }
 
-      --fs-lg: 3.75rem;
-      --lh-lg: 4rem;
-
-      --fs-xl: 7rem;
-      --lh-xl: 7rem;
-   }
 }
