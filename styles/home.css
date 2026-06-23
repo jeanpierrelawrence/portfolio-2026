@@ -128,7 +128,7 @@
     padding: 0.5rem 1rem;
     border-radius: var(--radius-full);
     white-space: nowrap;
-    font-size: 0.875rem;
+    font-size: var(--fs-sm);
 }
 
 .principles h2 {

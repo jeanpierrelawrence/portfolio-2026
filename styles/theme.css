@@ -29,17 +29,17 @@
      ========================================================================== */
   --ff-primary: 'Satoshi', sans-serif;
 
-   --fs-sm: 1rem;
-   --lh-sm: 1.5rem;
+   --fs-sm: 0.875rem;
+   --lh-sm: 1rem;
 
-   --fs-md: 1.75rem;
-   --lh-md: 2rem;
+   --fs-md: 1rem;
+   --lh-md: 1rem;
 
-   --fs-lg: 2.25rem;
-   --lh-lg: 2.5rem;
+   --fs-lg: 2rem;
+   --lh-lg: 2rem;
 
-   --fs-xl: 4rem;
-   --lh-xl: 4rem;
+   --fs-xl: 3rem;
+   --lh-xl: 3rem;
 
   /* ==========================================================================
      3. BORDERS & SHAPE
@@ -71,6 +71,10 @@ body {
    color: var(--clr-black);
    background-color: var(--clr-white);
    font-weight: 800;
+}
+
+main {
+   overflow-x: hidden;
 }
 
 ul {
