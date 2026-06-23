@@ -209,12 +209,21 @@
 ========================================================================== */
 
 footer {
-    display: flex;
+    display: block;
     justify-content: center;
 }
 
 .footer-grid {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-1);
+
+    width: 70%;
+    max-width: 1200px;
+    margin: 0 auto;
+
     background-color: var(--clr-gray-100);
     border-radius: 0 0 var(--radius-subtle) var(--radius-subtle);
     padding: var(--space-1) var(--space-2);
