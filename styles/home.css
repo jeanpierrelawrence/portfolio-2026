@@ -44,6 +44,10 @@
      Hero
 ========================================================================== */
 
+.hero {
+    min-height: 80vh;
+}
+
 .hero-footer p {
     font-weight: 800;
     padding-top: var(--space-2);
@@ -58,7 +62,7 @@
     font-size: 10rem;
     line-height: 8rem;
     font-weight: 800;
-    letter-spacing: -10px;
+    letter-spacing: -0.04em;
 }
 
 /* ==========================================================================
@@ -257,6 +261,11 @@ footer {
 
 @media only screen and (min-width: 48rem) {
 
+    .section-padding {
+        padding: var(--space-4);
+    }
+
+
     /* ==========================================================================
         HEADER
     ========================================================================== */
@@ -283,10 +292,18 @@ footer {
         HERO
     ========================================================================== */
 
+    .hero {
+        width: 100%;
+        max-width: 80rem;
+    }
+
     .hero-footer {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         padding-top: var(--space-4);
+        margin-left: clamp(2rem, 15vw, 20rem);
+        padding-right: clamp(2rem, 5vw, 10rem);
     }
 
     .hero-footer > * {
@@ -302,6 +319,7 @@ footer {
         font-size: 17rem;
         line-height: 13rem;
         letter-spacing: -20px;
+        margin-left: clamp(2rem, 15vw, 20rem);
     }
 
     /* ==========================================================================
@@ -310,18 +328,92 @@ footer {
 
     .work-item a img {
         width: 100%;
-        max-width: 700px;
         height: auto;
         object-fit: cover;
     }
 
+    /* ==========================================================================
+        Contact
+    ========================================================================== */
+
+    .contact {
+        padding-inline: var(--space-4);
+    }
 }
 
-@media only screen and (min-width: 75rem) {
+@media only screen and (min-width: 64rem) {
 
-   .hero-focal {
+    .section-padding {
+        padding-inline: 12rem;
+    }
+
+    /* ==========================================================================
+        Hero
+    ========================================================================== */
+
+    .hero {
+        width: 100%;
+        max-width: none !important;
+    }
+
+    .hero-focal {
         font-size: 25rem;
         line-height: 15rem;
     }
 
+    .hero-footer {
+        padding-top: var(--space-5);
+    }
+
+    /* ==========================================================================
+        Work
+    ========================================================================== */
+
+    .work-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* ==========================================================================
+        Principles
+    ========================================================================== */
+
+    .card-tags {
+        gap: var(--space-1);
+    }
+
+    .principles-item {
+        padding: var(--space-5);
+    }
+
+    .principles-item p {
+        padding-top: var(--space-2);
+    }
+
+    /* ==========================================================================
+        Contact
+    ========================================================================== */
+
+    .contact {
+        padding-inline: 12rem;
+    }
+    .contact-box {
+        padding: var(--space-5);
+    }
+
+    .contact-box p {
+        margin-bottom: var(--space-3);
+    }
+
+    /* ==========================================================================
+        Footer
+    ========================================================================== */
+
+    .footer-grid {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer-credits p {
+        text-align: left;
+    }
 }
