@@ -52,7 +52,15 @@
     position: relative;
 }
 
+.work-item a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-subtle);
+}
+
 .work-item a img {
+    display: block;
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -111,16 +119,23 @@
     display: flex;
     align-items: start;
     flex-direction: column;
-    gap: var(--space-3);
+    gap: var(--space-4);
+    position: relative;
 }
 
 .principles-item {
+    width: 100%;
     border-radius: var(--radius-subtle);
     padding: var(--space-2);
+    position: sticky;
+    top: 1.5rem;
+    will-change: transform;
 }
 
 .principles-item:nth-child(1) {
     background-color: var(--clr-gray-100);
+    top: 1.5rem;
+    z-index: 1;
 }
 
 .principles-item:nth-child(1) .tag {
@@ -130,6 +145,8 @@
 .principles-item:nth-child(2) {
     background-color: var(--clr-gray-300);
     color: var(--clr-gray-100);
+    top: 4.5rem;
+    z-index: 2;
 }
 
 .principles-item:nth-child(2) .tag {
@@ -140,6 +157,8 @@
 .principles-item:nth-child(3) {
     background-color: var(--clr-black);
     color: var(--clr-gray-100);
+    top: 7.5rem;
+    z-index: 3;
 }
 
 .principles-item:nth-child(3) .tag {
@@ -268,6 +287,18 @@
 
     .principles-item {
         padding: var(--space-5);
+    }
+
+    .principles-item:nth-child(1) {
+        top: 2rem;
+    }
+
+    .principles-item:nth-child(2) {
+        top: 6.5rem;
+    }
+
+    .principles-item:nth-child(3) {
+        top: 11rem;
     }
 
     .principles-item p {
